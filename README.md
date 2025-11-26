@@ -5,29 +5,33 @@
 </p>
 
 # 🌉 IoTIVP-Gateway v1.0  
-### **Binary → Core → Verify Pipeline**
+### **Binary → Core → Verify — Unified Pipeline**
 
-IoTIVP-Gateway is the bridge layer connecting all IoTIVP components.
+The IoTIVP-Gateway ties the entire protocol together by:
 
-It handles:
-
-1. Binary decoding  
-2. TLV → Core field mapping  
-3. Core hash computation  
-4. Integrity scoring via IoTIVP-Verify  
-5. Unified output for cloud, robotics, n8n, dashboards  
+1. Decoding IoTIVP-Binary  
+2. Mapping TLV → Core JSON  
+3. Recomputing Core hash  
+4. Running the Verify engine  
+5. Outputting trusted packets  
 
 ---
 
 # 🪜 Data Flow
 
 ```
-IoTIVP-Binary  →  IoTIVP-Core  →  IoTIVP-Verify  →  Applications
+IoTIVP-Binary
+      ↓
+IoTIVP-Core
+      ↓
+IoTIVP-Verify
+      ↓
+Applications (Cloud, n8n, Robotics)
 ```
 
 ---
 
-# 🔧 Example
+# 🔧 Python Example
 
 ```python
 from gateway import process_binary_packet
@@ -60,36 +64,14 @@ print(result)
 
 ---
 
-# 📘 Features
+# 🧩 Features
 
-- ✔ Converts TLV to structured fields  
-- ✔ Recomputes hash via Core rules  
-- ✔ Applies full Verify engine  
-- ✔ Plug-and-play with n8n node  
-- ✔ Robust decoding for low-level sensors  
-
----
-
-# 🧱 TLV Field Mapping
-
-```
-0x01 -> temperature  
-0x02 -> humidity  
-0x03 -> battery  
-```
-
-Extendable for robotics, GPS, accelerometers, etc.
+- ✔ Full Binary → Core → Verify pipeline  
+- ✔ TLV + hashing support  
+- ✔ Edge & cloud friendly  
+- ✔ Perfect for n8n integrations  
+- ✔ Robotics-compatible  
 
 ---
 
-# 🔐 Why IoTIVP-Gateway?
-
-It is the **glue** that makes IoTIVP:
-
-- interoperable  
-- deployable  
-- cloud-ready  
-- automation-ready  
-
-IoTIVP-Gateway is what makes the entire protocol practical.
-
+**IoTIVP-Gateway makes IoTIVP deployable across real-world systems.**
