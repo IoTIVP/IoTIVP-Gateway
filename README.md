@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Protocol-IoTIVP%20Gateway-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Bridge-Binary→Core→Verify-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Use-Edge%20%7C%20Cloud%20%7C%20n8n-yellow?style=for-the-badge"/>
+</p>
+
+# 🌉 IoTIVP-Gateway v1.0
+
+
 # 🌉 IoTIVP-Gateway v1.0  
 ### **Binary → Core → Verify Pipeline**
 
